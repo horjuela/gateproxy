@@ -3,8 +3,9 @@
 # Copyright (c) 2016, Gateproxy.com
 # All rights reserved. Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
 # HowTO https://goo.gl/ZT4LTi
-# Ejecute en el terminal: 
-# wget -c --retry-connrefused -t 0 https://www.googledrive.com/host/0B0IOC2-GhY8PV01MR3R3XzRyXzA -O gateproxy.sh; chmod +x gateproxy.sh; ./gateproxy.sh
+# Instalacion: 
+# git clone https://github.com/maravento/gateproxy.git
+# chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 #########################################################################################################################################################
 
 # CHECKING SO
@@ -28,7 +29,7 @@ clear
 echo
 echo
 echo "      Bienvenido a la instalacion de GateProxy Home and Business"
-echo "  Ubuntu 16.04.x (Xenial Xerus) LTSx64 v1.0 Alpha. Update Jun 11/2016"
+echo "  Ubuntu 16.04.x (Xenial Xerus) LTSx64 v1.0 Alpha. Update Jun 13/2016"
 echo
 echo
 echo "  Exención de responsabilidad:
@@ -40,22 +41,14 @@ echo "  Presione ENTER para iniciar o CTRL+C para cancelar";
 read RES
 clear
 echo
-echo "Descargando Proyecto GateProxy..."
-mkdir -p gateproxy backup
-
-function wgetgateproxy(){
-	wget -c --retry-connrefused -t 0 https://www.googledrive.com/host/0B0IOC2-GhY8PS2x6XzB1N2l3bGs -O gateproxy.tar.gz 
-	wget -c --retry-connrefused -t 0 https://www.googledrive.com/host/0B0IOC2-GhY8PdU5OLVo0LUxpa0k -O gateproxy.md5
-}
-wgetgateproxy
-
-a=$(md5sum gateproxy.tar.gz | awk '{print $1}')
-b=$(cat gateproxy.md5 | awk '{print $1}')
+echo "Verificando suma..."
+a=$(md5sum gateproxy/gateproxy.tar.gz | awk '{print $1}')
+b=$(cat gateproxy/gateproxy.md5 | awk '{print $1}')
 
 if [ "$a" = "$b" ]
 then 
 	echo " la suma coincide"
-	tar -C gateproxy -xvzf gateproxy.tar.gz >/dev/null 2>&1 && sleep 2
+	tar -C gateproxy -xvzf gateproxy/gateproxy.tar.gz >/dev/null 2>&1 && sleep 2
 	sudo mkdir -p /etc/acl 2>&1
  	sudo cp -rf gateproxy/acl/* /etc/acl >/dev/null 2>&1 && sleep 2
   	echo OK
