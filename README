@@ -7,25 +7,33 @@ También puede ser implementado tanto en un servidor "físico", como en una VM, 
 Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewall, y muchas otras aplicaciones, en su mayoría libres, las cuales le brindan a su hogar u organización un alto nivel de seguridad, estabilidad, escalabilidad y administración de su entorno Home & Bussiness.
 
 Descripción
-file:          gateproxy.pdf (HowTO)
-Update:        Jun 11/2016 20:14 UTC-05:00
-Version:       1.0 Alpha
+HowTO:       gateproxy.pdf (https://goo.gl/ZT4LTi)
+Update:      Jun 13/2016 10:09 UTC-05:00
+Version:     1.0 Alpha
 
 Requisitos Mínimos
-GNU/Linux:     Ubuntu 16.04.x (Xenial Xerus) LTS x64
-Procesador:    Intel compatible 1x GHz
-RAM:           4GB
-DD:            200 GB
-Display:       1024 x 768 128Mb Video
-Install:       DVD/USB
-Internet:      Alta velocidad (recomendado)
-Bash:          4.3x (verifique con echo $BASH_VERSION)
-Desktop:       Mate (Opcional)
+GNU/Linux:   Ubuntu 16.04.x (Xenial Xerus) LTS x64
+Procesador:  Intel compatible 1x GHz
+RAM:         4GB
+DD:          200 GB
+Display:     1024 x 768 128Mb Video
+Internet:    Alta velocidad (recomendado)
+Bash:        4.3x (verifique con echo $BASH_VERSION)
+Desktop:     Mate (Opcional)
+Git:         sudo apt -y install git
+
+Instalación:
+Abra el terminal y ejecute:
+git clone https://github.com/maravento/gateproxy.git
+chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 
 Importante:
-El soporte de Gateproxy para Debian y versiones de Ubuntu, anteriores a 16.04, ha concluido. Puede hacer upgrade a Ubuntu 16.04.x con:
-sudo apt-get -y install apt dpkg && sudo do-release-upgrade -dProyectos Vinculados:
+El soporte para Debian y Ubuntu (anteriores a 16.04) ha concluido. Haga upgrade con:
+sudo apt-get -y install apt dpkg && sudo do-release-upgrade -d
+
+Proyectos Vinculados:
 Los proyectos Blacklistweb y Blackstring son componentes de Gateproxy.
+
 Exención de Responsabilidad
 Este script puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo.
 
