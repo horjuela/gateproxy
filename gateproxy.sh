@@ -25,6 +25,49 @@ fi
 }
 is_xenial
 
+# CHECKING INTERFACES
+# DIRECCION MAC DE LA ETH PUBLICA
+function is_mac_public(){
+	read -p "Introduzca la MAC de la ETH0 publica (Formato: 00:00:00:00:00:00): " MAC
+	MACNEW=`echo $MAC`
+	if [ "$MACNEW" ]; then
+	find gateproxy/10-network.rules -type f -print0 | xargs -0 -I "{}" sed -i "s:00:00:00:00:00:00:$MACNEW:g"  "{}"
+	echo "Ha introducido correctamente la $MAC de la ETH publica"
+   fi
+}
+
+# DIRECCION MAC DE LA ETH LOCAL
+function is_mac_local(){
+	read -p "Introduzca la MAC de la ETH1 Local (Formato: 11:11:11:11:11:11): " MAC
+	MACNEW=`echo $MAC`
+	if [ "$MACNEW" ]; then
+	find gateproxy/10-network.rules -type f -print0 | xargs -0 -I "{}" sed -i "s:11:11:11:11:11:11:$MACNEW:g"  "{}"
+	echo "Ha introducido correctamente la $MAC de la ETH local"
+   fi
+}
+
+function is_interfaces(){
+is_interfaces=`ifconfig | grep eth`
+	if [ "$is_interfaces" ]; then
+	echo
+	echo "Interfaces correctas"
+  else
+	echo
+	echo "Interfaces incorrectas"
+	echo
+	ifconfig | grep HW
+	echo
+	is_mac_public
+	is_mac_local
+	sudo cp gateproxy/10-network.rules /etc/udev/rules.d/10-network.rules	
+	echo "Ha terminado la configuracion de sus interfaces"
+	echo "Reinicie su servidor y ejecute nuevamente Gateproxy"
+	echo
+	exit 
+fi
+}
+is_interfaces
+
 clear
 echo
 echo
