@@ -30,8 +30,8 @@ Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewa
 
 Abra el terminal y ejecute:
 ```
-git clone https://github.com/maravento/gateproxy.git
-chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
+$ git clone https://github.com/maravento/gateproxy.git
+$ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 ```
 
 **Importante:**

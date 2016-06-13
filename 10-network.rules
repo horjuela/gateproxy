@@ -1,0 +1,9 @@
+# Archivo de Configuracion persistente ETH
+# Ubicacion /etc/udev/rules.d/10-network.rules
+
+# Public eth
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:00:00:00:00:00", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+
+
+# Local Net eth
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="11:11:11:11:11:11", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1"
