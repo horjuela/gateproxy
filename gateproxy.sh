@@ -4,7 +4,7 @@
 # All rights reserved. Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
 # HowTO https://goo.gl/ZT4LTi
 # Instalacion: 
-# git clone https://github.com/maravento/gateproxy.git
+# git clone https://github.com/maravento/gateproxy
 # chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 #########################################################################################################################################################
 
@@ -12,13 +12,13 @@
 function is_xenial(){
 is_xenial=`lsb_release -sc | grep xenial`
 	if [ "$is_xenial" ]; then
-	echo " SO correcto"
+	echo "SO correcto"
   else
 	clear
 	echo
 	echo
-	echo " Sistema Operativo incorrecto. Instalacion abortada"
-	echo " Asegurese de tener instalado Ubuntu 16.04.x LTS x64"
+	echo "Sistema Operativo incorrecto. Instalacion abortada"
+	echo "Asegurese de tener instalado Ubuntu 16.04.x LTS x64"
 	echo
 	exit
 fi
@@ -73,7 +73,7 @@ clear
 echo
 echo
 echo "      Bienvenido a la instalacion de GateProxy Home and Business"
-echo "  Ubuntu 16.04.x (Xenial Xerus) LTSx64 v1.0 Alpha. Update Jun 13/2016"
+echo "  Ubuntu 16.04.x (Xenial Xerus) LTSx64 v1.0 Alpha. Update Jun 14/2016"
 echo
 echo
 echo "  Exención de responsabilidad:
@@ -91,14 +91,14 @@ b=$(cat gateproxy/gateproxy.md5 | awk '{print $1}')
 
 if [ "$a" = "$b" ]
 then 
-	echo " la suma coincide"
+	echo "la suma coincide"
 	tar -C gateproxy -xvzf gateproxy/gateproxy.tar.gz >/dev/null 2>&1 && sleep 2
 	sudo mkdir -p /etc/acl 2>&1
  	sudo cp -rf gateproxy/acl/* /etc/acl >/dev/null 2>&1 && sleep 2
   	echo OK
 else
-	echo " la suma no coincide"
-	echo " Verifique su conexion a internet y reinicie el script"
+	echo "la suma no coincide"
+	echo "Verifique su conexion a internet y reinicie el script"
 	rm -rf gateproxy*
 	exit
 fi
