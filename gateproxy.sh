@@ -58,6 +58,7 @@ is_interfaces=`ifconfig | grep eth`
 	ifconfig | grep HW
 	echo
 	is_mac_public
+	echo
 	is_mac_local
 	sudo cp gateproxy/10-network.rules /etc/udev/rules.d/10-network.rules	
 	echo "Ha terminado la configuracion de sus interfaces"
