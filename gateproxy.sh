@@ -1,12 +1,10 @@
 #!/bin/bash
-#########################################################################################################################################################
-# Copyright (c) 2016, Gateproxy.com
-# All rights reserved. Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
-# HowTO https://goo.gl/ZT4LTi
-# Instalacion: 
-# git clone https://github.com/maravento/gateproxy
-# chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
-#########################################################################################################################################################
+########################################################################################################################
+# (c) 2016. Gateproxy.com
+# Licence: Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional
+# HowTO: https://goo.gl/ZT4LTi
+# Install: git clone https://github.com/maravento/gateproxy && chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
+########################################################################################################################
 
 # CHECKING SO
 function is_xenial(){
