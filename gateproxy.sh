@@ -69,9 +69,19 @@ is_interfaces
 
 clear
 echo
+echo "  Bienvenido a la instalacion de GateProxy Home and Business"
+echo "               v1.0 Alpha. Update Jun 14/2016"
 echo
-echo "      Bienvenido a la instalacion de GateProxy Home and Business"
-echo "  Ubuntu 16.04.x (Xenial Xerus) LTSx64 v1.0 Alpha. Update Jun 14/2016"
+echo
+echo "  Requisitos Minimos:"
+echo "  GNU/Linux:   Ubuntu 16.04.x (Xenial Xerus) LTS x64"
+echo "  Procesador:  Intel compatible 1x GHz"
+echo "  RAM:         4GB"
+echo "  DD:          200 GB"
+echo "  Display:     1024 x 768 128Mb Video"
+echo "  Internet:    High Speed (esencial)"
+echo "  Desktop:     Mate (opcional)"
+echo "  Git:         sudo apt -y install git"
 echo
 echo
 echo "  Exención de responsabilidad:
