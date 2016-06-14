@@ -24,7 +24,6 @@ Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewa
 - Internet:     Alta velocidad (recomendado)
 - Bash:         4.3x (verifique con echo $BASH_VERSION)
 - Desktop:      [Mate] (http://mate-desktop.org/) (Opcional)
-- Git:          sudo apt -y install git
 
 **Instalación:**
 
@@ -34,11 +33,14 @@ $ git clone https://github.com/maravento/gateproxy.git
 $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 ```
 
-**Importante:**
-
-El soporte para Debian y Ubuntu (anteriores a 16.04 LTS) ha concluido. Haga upgrade con:
+**Dependencias:**
 ```
-sudo apt-get -y install apt dpkg && sudo do-release-upgrade -d
+sudo apt -y install git apt dpkg
+```
+
+Actualice a Ubuntu 16.04 LTS x64 con:
+```
+sudo do-release-upgrade -d
 ```
 
 **Proyectos Vinculados:**
