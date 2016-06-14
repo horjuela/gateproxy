@@ -61,7 +61,7 @@ is_interfaces=`ifconfig | grep eth`
 	is_mac_local
 	sudo cp gateproxy/10-network.rules /etc/udev/rules.d/10-network.rules	
 	echo "Ha terminado la configuracion de sus interfaces"
-	echo "Reinicie su servidor y ejecute nuevamente Gateproxy"
+	echo "Reinicie su servidor y ejecute nuevamente gateproxy.sh"
 	echo
 	exit 
 fi
