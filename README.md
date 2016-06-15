@@ -47,7 +47,7 @@ sudo do-release-upgrade -d
 
 **Proyectos Vinculados:**
 
-Los proyectos [Blackwebs] (http://www.maravento.com/p/blacklistweb.html) y [Blackstring] (http://www.maravento.com/p/blackstring.html) son componentes de Gateproxy.
+Los proyectos [Blackwebs] (https://github.com/maravento/blackwebs), [Blackips] (https://github.com/maravento/blackips) y [Blackstring] (https://github.com/maravento/blackstring) son módulos de [Gateproxy] (http://www.gateproxy.com).
 
 **Exención de Responsabilidad**
 
