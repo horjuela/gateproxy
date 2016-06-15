@@ -1190,7 +1190,7 @@ sudo crontab -l | { cat; echo "@reboot /etc/init.d/leases.sh
 @weekly /etc/init.d/logrotate.sh
 @weekly /etc/init.d/cleaner.sh
 @weekly /etc/init.d/geozones.sh
-@weekly /etc/init.d/blacklistweb.sh
+@weekly /etc/init.d/blackweb.sh
 @weekly /etc/init.d/backup start"; } | sudo crontab -
 sudo service cron restart
 echo OK
