@@ -70,7 +70,7 @@ is_interfaces
 clear
 echo
 echo "  Bienvenido a la instalacion de GateProxy Home and Business"
-echo "               v1.0 Alpha. Update Jun 14/2016"
+echo "               v1.0 Alpha. Update Jun 15/2016"
 echo
 echo
 echo "  Requisitos Minimos:"
@@ -589,10 +589,6 @@ function is_intercept(){
 	sed -i '/CACHEPEER/r gateproxy/conf/proxy/cpintercept.txt' gateproxy/conf/squid/squid.conf
 	sed -i "s:3128:8080:g" gateproxy/conf/monitor/config.inc.php
 	sed -i "s:3128:8080:g" gateproxy/conf/squid/cachemgr.conf
-	sudo cp -f gateproxy/conf/proxy/web2ip.sh /etc/init.d/web2ip.sh
-	sudo chown root:root /etc/init.d/web2ip.sh
-	sudo chmod +x /etc/init.d/web2ip.sh
-	sudo crontab -l | { cat; echo "@weekly /etc/init.d/web2ip.sh"; } | sudo crontab -
 	echo OK
 }
 
@@ -1147,15 +1143,12 @@ echo "Transfiriendo configuraciones esenciales..."
 	sudo cp -f /etc/apache2/ports.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/apache/ports.conf  /etc/apache2/ports.conf
 	sudo cp -f gateproxy/conf/gateproxywp.jpg "Imágenes"/gateproxywp.jpg >/dev/null 2>&1
-	sudo cp -rf gateproxy/conf/scripts/{blockips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh /etc/init.d
-	sudo chown root:root /etc/init.d/{blockips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
-	sudo chmod +x /etc/init.d/{blockips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
+	sudo cp -rf gateproxy/conf/scripts/{blackips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh /etc/init.d
+	sudo chown root:root /etc/init.d/{blackips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
+	sudo chmod +x /etc/init.d/{blackips,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
     sudo cp -f gateproxy/conf/scripts/backup /etc/init.d/backup
 	sudo chown root:root /etc/init.d/backup
 	sudo chmod +x /etc/init.d/backup
-	sudo cp -f gateproxy/conf/scripts/filter.py /etc/init.d/filter.py
-	sudo chown root:root /etc/init.d/filter.py
-	sudo chmod +x /etc/init.d/filter.py
 	sudo /etc/init.d/geozones.sh >/dev/null 2>&1
 	sudo cp -f /etc/sysctl.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/sysctl.conf /etc/sysctl.conf
