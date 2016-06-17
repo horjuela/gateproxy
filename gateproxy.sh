@@ -70,7 +70,7 @@ is_interfaces
 clear
 echo
 echo "  Bienvenido a la instalacion de GateProxy Home and Business"
-echo "               v1.0 Alpha. Update Jun 15/2016"
+echo "               v1.0 Alpha. Update Jun 17/2016"
 echo
 echo
 echo "  Requisitos Minimos:"
@@ -346,7 +346,7 @@ echo
 	# Systemback
 	sudo add-apt-repository ppa:nemh/systemback --yes
 	# Pack Install
-	sudo apt update && sudo apt -f install && sudo apt -y install build-essential checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check avahi-daemon automake make dpatch patchutils autotools-dev debhelper quilt xutils lintian cmake libtool autoconf git git-core subversion bzr gcc patch module-assistant libupnp-dev dkms linux-headers-$(uname -r) rcconf dialog aptitude bleachbit gksu libgksu2-0 vmm libglib2.0-0 ntfs-config dconf-editor dconf-tools jfsutils sysinfo hardinfo deborphan gtkorphan xsltproc lshw-gtk gedit curl uudeview bluefish geany gparted xfsprogs reiserfsprogs reiser4progs kpartx dmraid util-linux preload prelink synaptic perl libwww-perl libmailtools-perl libmime-lite-perl librrds-perl libdbi-perl libxml-simple-perl libhttp-server-simple-perl libconfig-general-perl libio-socket-ssl-perl libdate-manip-perl libclass-dbi-mysql-perl libnet-ssleay-perl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python python-pcapy python-cairo python-gi python-gobject python-gobject-2 python-gtk2 python-notify python-dev python-glade2 unattended-upgrades gnome-disk-utility gdebi gdebi-core unace zip unzip p7zip-full sharutils mpack arj cabextract rar unrar file-roller ipset vim ttf-dejavu hfsplus hfsprogs hfsutils hfsutils-tcltk exfat-fuse exfat-utils zenity w3m lsscsi winbind fping freefilesync p7zip-rar linux-tools-common searchmonkey ppa-purge google-chrome-stable webmin firefox snapd systemback systemback-locales unetbootin ubuntu-tweak rrdtool procps geoip-database ttf-mscorefonts-installer
+	sudo apt update && sudo apt -f install && sudo apt -y install build-essential checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check avahi-daemon automake make dpatch patchutils autotools-dev debhelper quilt xutils lintian cmake libtool autoconf git git-core subversion bzr gcc patch module-assistant libupnp-dev dkms linux-headers-$(uname -r) rcconf dialog aptitude bleachbit gksu libgksu2-0 vmm libglib2.0-0 ntfs-config dconf-editor dconf-tools jfsutils sysinfo hardinfo deborphan gtkorphan xsltproc lshw-gtk gedit curl uudeview bluefish geany gparted xfsprogs reiserfsprogs reiser4progs kpartx dmraid util-linux preload prelink synaptic perl libwww-perl libmailtools-perl libmime-lite-perl librrds-perl libdbi-perl libxml-simple-perl libhttp-server-simple-perl libconfig-general-perl libio-socket-ssl-perl libdate-manip-perl libclass-dbi-mysql-perl libnet-ssleay-perl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python python-pcapy python-cairo python-gi python-gobject python-gobject-2 python-gtk2 python-notify python-dev python-glade2 unattended-upgrades gnome-disk-utility gdebi gdebi-core unace zip unzip p7zip-full sharutils mpack arj cabextract rar unrar file-roller ipset vim ttf-dejavu hfsplus hfsprogs hfsutils hfsutils-tcltk exfat-fuse exfat-utils zenity w3m lsscsi winbind fping freefilesync p7zip-rar linux-tools-common searchmonkey ppa-purge google-chrome-stable webmin firefox snapd systemback systemback-locales unetbootin ubuntu-tweak rrdtool procps geoip-database libpam-google-autenticador ttf-mscorefonts-installer
 sudo dpkg --configure -a && sudo apt -f install && sudo m-a prepare
 	echo OK
 
@@ -1190,7 +1190,7 @@ sudo crontab -l | { cat; echo "@reboot /etc/init.d/leases.sh
 @weekly /etc/init.d/logrotate.sh
 @weekly /etc/init.d/cleaner.sh
 @weekly /etc/init.d/geozones.sh
-@weekly /etc/init.d/blackwebs.sh
+@weekly /etc/init.d/blackweb.sh
 @weekly /etc/init.d/blackips.sh
 @weekly /etc/init.d/backup start"; } | sudo crontab -
 sudo service cron restart
