@@ -37,7 +37,7 @@ $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 
 **Dependencias:**
 ```
-sudo apt -y install git apt dpkg
+sudo apt-get -y install git apt dpkg
 ```
 
 Actualice a Ubuntu 16.04 LTS x64 con:
