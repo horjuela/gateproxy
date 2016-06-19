@@ -1143,9 +1143,9 @@ echo "Transfiriendo configuraciones esenciales..."
 	sudo cp -f /etc/apache2/ports.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/apache/ports.conf  /etc/apache2/ports.conf
 	sudo cp -f gateproxy/conf/gateproxywp.jpg "Imágenes"/gateproxywp.jpg >/dev/null 2>&1
-	sudo cp -rf gateproxy/conf/scripts/{blackips,blackwebs,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh /etc/init.d
-	sudo chown root:root /etc/init.d/{blackips,blackwebs,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
-	sudo chmod +x /etc/init.d/{blackips,blackwebs,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
+	sudo cp -rf gateproxy/conf/scripts/{blackip,blackweb,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh /etc/init.d
+	sudo chown root:root /etc/init.d/{blackip,blackweb,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
+	sudo chmod +x /etc/init.d/{blackip,blackweb,cleaner,geozones,iptables,leases,lock,logrotate,servicesreload,updatehour}.sh
     sudo cp -f gateproxy/conf/scripts/backup /etc/init.d/backup
 	sudo chown root:root /etc/init.d/backup
 	sudo chmod +x /etc/init.d/backup
@@ -1191,7 +1191,7 @@ sudo crontab -l | { cat; echo "@reboot /etc/init.d/leases.sh
 @weekly /etc/init.d/cleaner.sh
 @weekly /etc/init.d/geozones.sh
 @weekly /etc/init.d/blackweb.sh
-@weekly /etc/init.d/blackips.sh
+@weekly /etc/init.d/blackip.sh
 @weekly /etc/init.d/backup start"; } | sudo crontab -
 sudo service cron restart
 echo OK
