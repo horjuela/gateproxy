@@ -11,7 +11,6 @@ Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewa
 **Descripción**
 
 - HowTO:        [gateproxy.pdf] (https://goo.gl/ZT4LTi)
-- Update:       Jun 13/2016 10:09 UTC-05:00
 - Version:      1.0 Alpha
 
 **Requisitos Mínimos**
@@ -27,7 +26,7 @@ Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewa
 
 **Instalación:**
 
-Abra el terminal y ejecute:
+Abra el terminal y ejecute (no-root):
 ```
 $ git clone https://github.com/maravento/gateproxy
 $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
@@ -40,18 +39,18 @@ $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 sudo apt-get -y install git apt dpkg
 ```
 
-Actualice a Ubuntu 16.04 LTS x64 con:
+Si tiene una versión anterior a [Ubuntu 16.04.x (Xenial Xerus) LTS x64] (http://www.ubuntu.com/download), actualice con:
 ```
 sudo do-release-upgrade -d
 ```
 
 **Proyectos Vinculados:**
 
-Los proyectos [Blackwebs] (https://github.com/maravento/blackwebs), [Blackips] (https://github.com/maravento/blackips) y [Blackstring] (https://github.com/maravento/blackstring) son módulos de [Gateproxy] (http://www.gateproxy.com).
+[Blackweb] (https://github.com/maravento/blackweb), [Blackip] (https://github.com/maravento/blackip) y [Blackstring] (https://github.com/maravento/blackstring) son componentes de [Gateproxy] (http://www.gateproxy.com).
 
 **Exención de Responsabilidad**
 
-Este script puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo.
+Este script puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo. Lea el [HowTO Gateproxy] (https://goo.gl/ZT4LTi)
 
 **Agradecimientos**
 
