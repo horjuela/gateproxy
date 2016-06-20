@@ -10,7 +10,7 @@ Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewa
 
 **Descripción**
 
-- HowTO:        [gateproxy.pdf] (https://goo.gl/ZT4LTi)
+- HowTO:        [Gateproxy.pdf] (https://goo.gl/ZT4LTi)
 - Version:      1.0 Alpha
 
 **Requisitos Mínimos**
@@ -44,9 +44,13 @@ Si tiene una versión anterior a [Ubuntu 16.04.x (Xenial Xerus) LTS x64] (http:/
 sudo do-release-upgrade -d
 ```
 
-**Proyectos Vinculados:**
+**Proyectos Incluidos:**
 
-[Blackweb] (https://github.com/maravento/blackweb), [Blackip] (https://github.com/maravento/blackip) y [Blackstring] (https://github.com/maravento/blackstring) son componentes de [Gateproxy] (http://www.gateproxy.com).
+[Blackweb] (https://github.com/maravento/blackweb)
+
+[Blackip] (https://github.com/maravento/blackip)
+
+[Blackstring] (https://github.com/maravento/blackstring)
 
 **Exención de Responsabilidad**
 
