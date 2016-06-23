@@ -650,6 +650,7 @@ while true; do
 	sed -i '/DNS-LOCAL/r gateproxy/conf/dnsmasq/iptdnslocal.txt' gateproxy/conf/scripts/iptables.sh
 	sed -i '/outgoing_proxy/r gateproxy/conf/dnsmasq/squidoutgoing.txt' gateproxy/conf/squid/squid.conf
 	sed -i '/dnsmasq_server/r gateproxy/conf/dnsmasq/squiddnslocal.txt' gateproxy/conf/squid/squid.conf
+	sudo crontab -l | { cat; echo "@weekly cat >/dev/null /var/log/dnsmasq.log"; } | sudo crontab -
 	echo '# Dnsmasq service
 	date=`date +%d/%m/%Y" "%H:%M:%S`
 	if [[ `netstat -plan | grep -w dnsmasq` != "" ]];then
@@ -1190,7 +1191,7 @@ sudo crontab -l | { cat; echo "@reboot /etc/init.d/leases.sh
 @weekly /etc/init.d/cleaner.sh
 @weekly /etc/init.d/geozones.sh
 @weekly /etc/init.d/blackweb.sh
-@weekly /etc/init.d/blackip.sh
+@weekly journalctl --vacuum-size=500M
 @weekly /etc/init.d/backup start"; } | sudo crontab -
 sudo service cron restart
 echo OK
