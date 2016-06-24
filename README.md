@@ -1,5 +1,7 @@
 ##Bienvenidos al proyecto [Gateproxy] (http://www.gateproxy.com)
 
+<a target="_blank" href=""><img src="https://img.shields.io/badge/Development-ALPHA-blue.svg"></a>
+
 [Gateproxy] (http://www.gateproxy.com) es un servidor, orientado a la administración de redes Home & Business, lo más intuitivo y desatendido posible, apto para el manejo del usuario, sin importar si tiene o no un alto grado de conocimientos en servidores GNU/Linux, generando así una mejor experiencia.
 
 El script de instalación y configuración es totalmente automatizado con una interacción mínima durante proceso.
