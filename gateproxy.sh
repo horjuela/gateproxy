@@ -1162,10 +1162,11 @@ echo "Configurando Squid..."
 	sudo cp -f /etc/squid/squid.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f /etc/squid/cachemgr.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/squid/{squid,cachemgr}.conf /etc/squid
+	sudo cp -f /etc/security/limits.conf{,.bak} >/dev/null 2>&1
+	sudo cp -f gateproxy/conf/security/limits.conf /etc/security/limits.conf
 	sudo service squid stop && sleep 3
 	sudo rm -rf /var/spool/squid/* && sleep 3
 	sudo squid -z && sleep 3
-	sudo service squid start
 	sudo crontab -l | { cat; echo "@weekly squid -k rotate"; } | sudo crontab -
 	echo OK
 clear
