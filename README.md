@@ -4,11 +4,7 @@
 
 [Gateproxy] (http://www.gateproxy.com) es un servidor para administrar pequeñas y medianas redes [LAN] (https://es.wikipedia.org/wiki/Red_de_%C3%A1rea_local), lo más intuitivo y desatendido posible, apto para el manejo del usuario, sin importar si tiene o no un alto grado de conocimientos en GNU/Linux, generando así una mejor experiencia.
 
-El script de instalación y configuración es totalmente automatizado con una interacción mínima durante proceso.
-Puede ser personalizado de acuerdo a las necesidades del administrador u organización, sin que esto implique una excesiva intervención, reduciendo así la curva de aprendizaje.
-
-También puede ser implementado tanto en un servidor "físico", como en una VM, para mayor flexibilidad y portabilidad.
-Entre sus múltiples herramientas, se pueden mencionar un Proxy Cache, un Firewall, y muchas otras aplicaciones, en su mayoría libres, las cuales le brindan a su hogar u organización un alto nivel de seguridad, estabilidad, escalabilidad y administración de su entorno.
+El script de instalación y configuración es totalmente automatizado con una interacción mínima durante proceso. Puede ser implementado tanto en un servidor "físico", como en una VM, para mayor flexibilidad y portabilidad y es altamente personalizable de acuerdo a las necesidades del administrador u organización, sin que esto implique una excesiva intervención, reduciendo así la curva de aprendizaje.
 
 **Non-commercial; educational purposes**
 
