@@ -953,9 +953,18 @@ function is_speedtest(){
 	echo
 }
 
+function is_usbdeath(){
+	echo "Activando monitoreo de puertos USB..."
+    git clone https://github.com/trpt/usbdeath
+    cd usbdeath
+    sudo cp usbdeath /etc/init.d && sudo chmod +x /etc/init.d/usbdeath
+    cd && rm -rf usbdeath
+    sudo /etc/init.d/usbdeath gen
+}
+
 while true; do
-    read -p "Desea instalar los Modulos de Reporte y Monitoreo? (Sqstat,
-Sarg, Webalizer, Iptraf, Monitorix, Bandwidthd, Speedtest y Top Family (s/n)" answer
+    read -p "Desea instalar los Modulos de Reporte y Monitoreo? (Sqstat, Sarg,
+Webalizer, Iptraf, Monitorix, Bandwidthd, Speedtest, Top Family y usbdeath (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -966,6 +975,7 @@ Sarg, Webalizer, Iptraf, Monitorix, Bandwidthd, Speedtest y Top Family (s/n)" an
 	is_monitor
 	is_bandwidthd
 	is_speedtest
+	is_usbdeath
 	echo OK
 			break;;
           	[Nn]* )
@@ -1177,7 +1187,6 @@ echo "Creando contrasena de acceso a /var/www/html..."
 	sudo cp -f gateproxy/conf/apache/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 	sudo htpasswd -c /etc/apache2/.htpasswd $USER
 	echo OK
-
 clear
 echo
 echo "Agregando tareas al crontab..."

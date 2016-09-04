@@ -6,7 +6,7 @@
 
 El script de instalación y configuración es totalmente automatizado y personalizable, de acuerdo a las necesidades del administrador u organización, con una interacción mínima durante proceso, reduciendo así la curva de aprendizaje. Puede ser implementado tanto en un servidor "físico", como en una VM, para mayor flexibilidad y portabilidad.
 
-**Non-commercial; educational purposes**
+**This Project is non-commercial. Only educational purposes**
 
 **Descripción**
 
