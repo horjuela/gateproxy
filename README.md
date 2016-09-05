@@ -15,7 +15,7 @@ El script de instalación y configuración es totalmente automatizado y personal
 
 **Requisitos Mínimos**
 
-- GNU/Linux:    [Ubuntu 16.04.x (Xenial Xerus) LTS x64] (http://www.ubuntu.com/download)
+- GNU/Linux:    [Ubuntu 16.04.x LTS x64] (http://www.ubuntu.com/download)
 - Procesador:   Intel compatible 1x GHz
 - RAM:          4GB
 - DD:           200 GB
@@ -31,14 +31,14 @@ Abra el terminal y ejecute (no-root):
 $ git clone https://github.com/maravento/gateproxy
 $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 ```
-![Gateproxy Script](https://6f3afb11143aba3ae4e41636eec043bea84a909f.googledrive.com/host/0B0IOC2-GhY8PQ2N1c1ZwQVljb3c)
+![Gateproxy Script](https://camo.githubusercontent.com/6630b94909b393dbed2a5c354191f75ebbd3e4d0/68747470733a2f2f366633616662313131343361626133616534653431363336656563303433626561383461393039662e676f6f676c6564726976652e636f6d2f686f73742f304230494f43322d476859385051324e3163315a7751566c6a623363)
 
 **Dependencias:**
 ```
 sudo apt-get -y install git apt dpkg
 ```
 
-Si tiene una versión anterior a [Ubuntu 16.04.x (Xenial Xerus) LTS x64] (http://www.ubuntu.com/download), actualice con:
+Si tiene una versión anterior a [Ubuntu 16.04.x LTS x64] (http://www.ubuntu.com/download), actualice con:
 ```
 sudo do-release-upgrade -d
 ```
@@ -53,7 +53,7 @@ sudo do-release-upgrade -d
 
 **Exención de Responsabilidad**
 
-Este script puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo. Lea el [HowTO Gateproxy] (https://goo.gl/ZT4LTi)
+Este script alpha y puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo. Lea el [HowTO Gateproxy] (https://goo.gl/ZT4LTi)
 
 **Agradecimientos**
 

@@ -73,11 +73,11 @@ echo "  Bienvenido a la instalacion de GateProxy Home and Business v1.0 Alpha"
 echo
 echo
 echo "  Requisitos Mínimos:"
-echo "  GNU/Linux:    Ubuntu 16.04.x (Xenial Xerus) LTS x64"
+echo "  GNU/Linux:    Ubuntu 16.04.x LTS x64"
 echo "  Procesador:   Intel compatible 1x GHz"
 echo "  RAM:          4GB"
 echo "  DD:           200 GB"
-echo "  Display:      1024 x 768 128Mb Video"
+echo "  Display:      1024 x 768 64/128Mb Video"
 echo "  Internet:     High Speed (esencial)"
 echo "  Desktop:      Mate (opcional)"
 echo "  Dependencias: sudo apt-get -y install git apt dpkg"
@@ -490,7 +490,7 @@ done
 clear
 echo
 while true; do
-	read -p "Desea instalar gdiskdump (Backup y Clonado de discos)? (s/n)" answer
+	read -p "Desea instalar gdiskdump (Disk Clone)? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -547,7 +547,7 @@ done
 clear
 echo
 while true; do
-	read -p "Desea instalar servidor VNC server (Vino-server)? (s/n)" answer
+	read -p "Desea instalar VNC server (Vino)? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
