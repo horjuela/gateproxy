@@ -801,8 +801,8 @@ done
 clear
 echo
 function is_top(){
-	echo "Instalando Top Family (Htop, Apachetop, iotop, Ntop-ng)"
-	sudo apt -f install && sudo apt -y install htop apachetop iotop libpcap-dev libglib2.0-dev libgeoip-dev redis-server geoip-database ruby-redis ntopng ntopng-data && sudo apt -f install
+	echo "Instalando Top Family (Htop, Apachetop, iotop, Ntop-ng), nethogs y nload"
+	sudo apt -f install && sudo apt -y install nload nethogs htop apachetop iotop libpcap-dev libglib2.0-dev libgeoip-dev redis-server geoip-database ruby-redis ntopng ntopng-data && sudo apt -f install
 	#sudo chown root:root /var/lib/redis >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/monitor/geoip.sh /etc/init.d
 	sudo chown root:root /etc/init.d/geoip.sh
@@ -963,8 +963,8 @@ function is_usbdeath(){
 }
 
 while true; do
-    read -p "Desea instalar los Modulos de Reporte y Monitoreo? (Sqstat, Sarg,
-Webalizer, Iptraf, Monitorix, Bandwidthd, Speedtest, Top Family y usbdeath (s/n)" answer
+    read -p "Desea instalar los Modulos de Reporte, Monitoreo y control de puertos? 
+(Sqstat, Sarg, nload, nethogs, Iptraf, Webalizer, Monitorix, Bandwidthd, Speedtest, Top Family y usbdeath) (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -1019,8 +1019,7 @@ clear
 echo
 while true; do
     read -p "Desea instalar herramientas de Red y Auditoria?
-Lynis, Nmap, Zenmap, python-nmap, Pipe Viewer, ArpScan, SSlscan, nbtscan, cutter, wireshark
-Hping, NetDiscover, tcpdump, My traceroute, Networking toolkit, Byobu, dsniff, wireless-tools (s/n)" answer
+(Lynis, Nmap, Zenmap, python-nmap, Pipe Viewer, ArpScan, SSlscan, nbtscan, cutter, wireshark, Hping, NetDiscover, tcpdump, My traceroute, Networking toolkit, Byobu, dsniff y wireless-tools) (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
