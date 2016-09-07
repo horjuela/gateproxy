@@ -19,7 +19,6 @@ El script de instalación y configuración es totalmente automatizado y personal
 - Procesador:   Intel compatible 1x GHz
 - RAM:          4GB
 - DD:           200 GB
-- Display:      1024 x 768 128Mb Video
 - Internet:     Alta velocidad (recomendado)
 - Bash:         4.3x (verifique con echo $BASH_VERSION)
 - Desktop:      [Mate] (http://mate-desktop.org/) (Opcional)
