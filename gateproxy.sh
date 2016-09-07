@@ -102,7 +102,7 @@ then
 	tar -C gateproxy -xvzf gateproxy/gateproxy.tar.gz >/dev/null 2>&1 && sleep 2
 	sudo mkdir -p /etc/acl 2>&1
  	sudo cp -rf gateproxy/acl/* /etc/acl >/dev/null 2>&1 && sleep 2
-  	echo OK
+    echo OK
 else
 	echo "la suma no coincide"
 	echo "Verifique su conexion a internet y reinicie el script"
@@ -1158,7 +1158,8 @@ echo "Transfiriendo configuraciones esenciales..."
     sudo cp -f gateproxy/conf/scripts/backup /etc/init.d/backup
 	sudo chown root:root /etc/init.d/backup
 	sudo chmod +x /etc/init.d/backup
-	sudo /etc/init.d/geozones.sh >/dev/null 2>&1
+	sudo /etc/init.d/geozones.sh
+    sudo /etc/init.d/blackweb.sh
 	sudo cp -f /etc/sysctl.conf{,.bak} >/dev/null 2>&1
 	sudo cp -f gateproxy/conf/sysctl.conf /etc/sysctl.conf
 	sudo sysctl -p >/dev/null 2>&1
