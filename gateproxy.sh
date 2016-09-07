@@ -5,17 +5,18 @@
 # HowTO: https://goo.gl/ZT4LTi
 # Install: git clone https://github.com/maravento/gateproxy && chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 ########################################################################################################################
-
+clear
 # CHECKING SO
 function is_xenial(){
 is_xenial=`lsb_release -sc | grep xenial`
 	if [ "$is_xenial" ]; then
-	echo "SO correcto"
+    echo
+	echo "Sistema Operativo Correcto"
   else
 	clear
 	echo
 	echo
-	echo "Sistema Operativo incorrecto. Instalacion abortada"
+	echo "Sistema Operativo Incorrecto. Instalacion abortada"
 	echo "Asegurese de tener instalado Ubuntu 16.04.x LTS x64"
 	echo
 	exit
@@ -48,10 +49,10 @@ function is_interfaces(){
 is_interfaces=`ifconfig | grep eth`
 	if [ "$is_interfaces" ]; then
 	echo
-	echo "Interfaces correctas"
+	echo "Interfaces Correctas"
   else
 	echo
-	echo "Interfaces incorrectas"
+	echo "Interfaces Incorrectas"
 	echo
 	ifconfig | grep HW
 	echo
@@ -60,7 +61,7 @@ is_interfaces=`ifconfig | grep eth`
 	is_mac_local
 	sudo cp gateproxy/10-network.rules /etc/udev/rules.d/10-network.rules	
 	echo "Ha terminado la configuracion de sus interfaces"
-	echo "Reinicie su servidor y ejecute nuevamente gateproxy.sh"
+	echo "Reinicie su servidor y ejecute nuevamente ./gateproxy.sh"
 	echo
 	exit 
 fi
@@ -69,7 +70,7 @@ is_interfaces
 
 clear
 echo
-echo "  Bienvenido a la instalacion de GateProxy Home and Business v1.0 Alpha"
+echo "  Bienvenido a la instalacion de GateProxy (Home & Business) v1.0 Alpha"
 echo
 echo
 echo "  Requisitos Mínimos:"

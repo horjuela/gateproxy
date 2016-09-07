@@ -30,7 +30,7 @@ Abra el terminal y ejecute (no-root):
 $ git clone https://github.com/maravento/gateproxy
 $ chmod +x gateproxy/gateproxy.sh && gateproxy/gateproxy.sh
 ```
-![Gateproxy Script](https://camo.githubusercontent.com/6630b94909b393dbed2a5c354191f75ebbd3e4d0/68747470733a2f2f366633616662313131343361626133616534653431363336656563303433626561383461393039662e676f6f676c6564726976652e636f6d2f686f73742f304230494f43322d476859385051324e3163315a7751566c6a623363)
+![Gateproxy Script](https://1.bp.blogspot.com/-8WxgAY93gmg/V9AQCT2MUZI/AAAAAAAACwQ/9j6hfFc8ot8CD-vcailpFhGd1ChudwB6QCLcB/s1600/gateproxy.jpg)
 
 **Dependencias:**
 ```
