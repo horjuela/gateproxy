@@ -6,8 +6,6 @@
 
 El script de instalación y configuración es totalmente automatizado y personalizable, de acuerdo a las necesidades del administrador u organización, con una interacción mínima durante proceso, reduciendo así la curva de aprendizaje. Puede ser implementado tanto en un servidor "físico", como en una VM, para mayor flexibilidad y portabilidad.
 
-**This Project is non-commercial. Only educational purposes**
-
 **Descripción**
 
 - HowTO:        [Gateproxy.pdf] (https://goo.gl/ZT4LTi)
@@ -58,4 +56,5 @@ Este script alpha y puede dañar su sistema si se usa incorrectamente. Úselo ba
 
 Agradecemos a todos aquellos que han contribuido a este proyecto, en especial [novatoz.com] (http://www.novatoz.com)
 
+**This Project is non-commercial. Only educational purposes (Master's Thesis Project)**
 © 2016 [Gateproxy] (http://www.gateproxy.com) por [maravento] (http://www.maravento.com) se distribuye bajo una [Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional] (http://creativecommons.org/licenses/by-nc-sa/4.0/). Basada en una obra en maravento. Permisos que vayan más allá de lo cubierto por esta licencia pueden encontrarse en maravento
