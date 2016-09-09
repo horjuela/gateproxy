@@ -635,7 +635,7 @@ done
 clear
 echo
 while true; do
-	read -p "Desea instalar el servidor DNS-LOCAL dnsmasq (para usuarios avanzados)? (s/n)" answer
+	read -p "Desea instalar el servidor DNS-LOCAL dnsmasq (Para Usuarios Avanzados)? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -779,7 +779,7 @@ echo "Instalando Rootkit checkers..."
 }
 
 while true; do
-   read -p "Desea instalar los Modulos de Seguridad (avanzado)?
+   read -p "Desea instalar los Modulos de Seguridad (Para Usuarios Avanzados)?
 Fail2ban, DDOSDeflate, Mod Security, OWASP, Evasive, Rootkitchk (s/n)" answer
 		case $answer in
           [Ss]* )
@@ -798,12 +798,14 @@ Fail2ban, DDOSDeflate, Mod Security, OWASP, Evasive, Rootkitchk (s/n)" answer
     esac
 done
 
-# IDS/IPS
+# IDS/IPS (Experimental)
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+# https://github.com/amabrouki/snort
 clear
 echo
 while true; do
-   read -p "Network Intrusion Prevention/Detection System (Experimental Pack)
-Desea instalar Snort Docker? -incluye Barnyard2, PulledPork, Snorby- (s/n)" answer
+   read -p "Modulo Docker NIPS/NIDS (Para Usuarios Avanzados)
+Desea instalar Snort? (with Barnyard2, PulledPork, Snorby) (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -833,7 +835,7 @@ done
 clear
 echo
 while true; do
-   read -p "Desea instalar ClamAV-AntiVirus (1GB RAM)? (s/n)" answer
+   read -p "Desea instalar ClamAV-AntiVirus (Min 1GB RAM)? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -1027,18 +1029,10 @@ function is_speedtest(){
 	echo
 }
 
-function is_usbdeath(){
-	echo "Activando monitoreo de puertos USB..."
-    git clone https://github.com/trpt/usbdeath
-    cd usbdeath
-    sudo cp usbdeath /etc/init.d && sudo chmod +x /etc/init.d/usbdeath
-    cd && rm -rf usbdeath
-    sudo /etc/init.d/usbdeath gen
-}
-
 while true; do
-    read -p "Desea instalar los Modulos de Reporte, Monitoreo y control de puertos? 
-(Sqstat, Sarg, nload, nethogs, Iptraf, Webalizer, Monitorix, Bandwidthd, Speedtest, Top Family y usbdeath) (s/n)" answer
+    read -p "Desea instalar los Modulos de Reporte, Monitoreo?
+(Sqstat, Sarg, nload, Iptraf, nethogs, Webalizer, Monitorix, Bandwidthd,
+Speedtest y Top Family) (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -1049,7 +1043,6 @@ while true; do
 	is_monitor
 	is_bandwidthd
 	is_speedtest
-	is_usbdeath
 	echo OK
 			break;;
           	[Nn]* )
@@ -1059,6 +1052,9 @@ while true; do
     esac
 done
 
+# NetData
+clear
+echo
 while true; do
     read -p "Desea instalar NetData (Monitoreo del Servidor)? (s/n)" answer
 		case $answer in
@@ -1088,12 +1084,38 @@ while true; do
     esac
 done
 
+# Control USB
+clear
+echo
+while true; do
+    read -p "Desea instalar control de puertos USB (Experimental) (s/n)" answer
+		case $answer in
+          [Ss]* )
+		# execute command yes
+	echo "Activando control de puertos USB..."
+    git clone https://github.com/trpt/usbdeath
+    cd usbdeath
+    sudo cp usbdeath /etc/init.d && sudo chmod +x /etc/init.d/usbdeath
+    cd && rm -rf usbdeath
+    sudo /etc/init.d/usbdeath gen
+	echo OK
+	echo "Visite el proyecto https://github.com/trpt/usbdeath"
+			break;;
+          	[Nn]* )
+		# execute command no
+			break;;
+        * ) echo; echo "Por favor responda SI (s) o NO (n).";;
+    esac
+done
+
 # AUDITORIA
 clear
 echo
 while true; do
-    read -p "Desea instalar herramientas de Red y Auditoria?
-(Lynis, Nmap, Zenmap, python-nmap, Pipe Viewer, ArpScan, SSlscan, nbtscan, cutter, wireshark, Hping, NetDiscover, tcpdump, My traceroute, Networking toolkit, Byobu, dsniff y wireless-tools) (s/n)" answer
+    read -p "Desea instalar herramientas de Red y Auditoria? (Para Usuarios Avanzados) 
+(Lynis, Nmap, Zenmap, ArpScan, python-nmap, Pipe Viewer, SSlscan, nbtscan, 
+cutter, wireshark, Hping, tcpdump, NetDiscover, My traceroute, Networking 
+toolkit, Byobu, dsniff y wireless-tools) (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes

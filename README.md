@@ -50,11 +50,13 @@ sudo do-release-upgrade -d
 
 **Exención de Responsabilidad**
 
-Este script alpha y puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo. Lea el [HowTO Gateproxy] (https://goo.gl/ZT4LTi)
+Este script puede dañar su sistema si se usa incorrectamente. Úselo bajo su propio riesgo. Lea [HowTO Gateproxy] (https://goo.gl/ZT4LTi)
 
 **Agradecimientos**
 
 Agradecemos a todos aquellos que han contribuido a este proyecto, en especial [novatoz.com] (http://www.novatoz.com)
+
+**Legal**
 
 This Project is educational purposes. Este proyecto es con fines educativos
 
