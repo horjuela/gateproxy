@@ -801,12 +801,12 @@ done
 clear
 echo
 while true; do
-   read -p "Desea instalar Clam AntiVirus (1GB RAM)? (s/n)" answer
+   read -p "Desea instalar ClamAV-AntiVirus (1GB RAM)? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
 	echo
-	echo "Instalando antivirus clamav..."
+	echo "Instalando ClamAV..."
 	sudo apt -f install && sudo apt -y install clamav clamav-daemon clamav-freshclam && sudo apt -f install && sudo killall freshclam && sudo freshclam -v
     sudo crontab -l | { cat; echo "@reboot /etc/init.d/clamav-daemon start"; } | sudo crontab -
 	sudo crontab -l | { cat; echo "@reboot /etc/init.d/clamav-freshclam start"; } | sudo crontab -
