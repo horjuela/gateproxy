@@ -797,6 +797,48 @@ Fail2ban, DDOSDeflate, Mod Security, OWASP, Evasive, Rootkitchk (s/n)" answer
     esac
 done
 
+# ANTIVIRUS
+clear
+echo
+while true; do
+   read -p "Desea instalar Clam AntiVirus (1GB RAM)? (s/n)" answer
+		case $answer in
+          [Ss]* )
+		# execute command yes
+	echo
+	echo "Instalando antivirus clamav..."
+	sudo apt -f install && sudo apt -y install clamav clamav-daemon clamav-freshclam && sudo apt -f install && sudo killall freshclam && sudo freshclam -v
+    sudo crontab -l | { cat; echo "@reboot /etc/init.d/clamav-daemon start"; } | sudo crontab -
+	sudo crontab -l | { cat; echo "@reboot /etc/init.d/clamav-freshclam start"; } | sudo crontab -
+    echo '# Antivirus Clamav
+	date=`date +%d/%m/%Y" "%H:%M:%S`
+	if [[ `ps -A | grep clamav-daemon` != "" ]];then
+	echo -e "\nONLINE"
+	else
+	echo -e "\n"
+	service clamav-daemon start
+	echo "<--| Clamav fue iniciado el $date |-->" >> /var/log/alert.log
+	fi
+	#
+	if [[ `ps -A | grep freshclam` != "" ]];then
+	echo -e "\nONLINE"
+	else
+	echo -e "\n"
+	service clamav-freshclam start
+	echo "<--| Clamav Update fue iniciado el $date |-->" >> /var/log/alert.log
+	fi'>> gateproxy/conf/scripts/servicesreload.sh
+	echo OK
+	echo "Elimine malware con: sudo clamscan --infected --remove --recursive /home"
+	echo OK
+	echo
+			break;;
+          	[Nn]* )
+		# execute command no
+			break;;
+        * ) echo; echo "Por favor responda SI (s) o NO (n).";;
+    esac
+done
+
 # REPORTES, LOGS Y MONITOREO
 clear
 echo
