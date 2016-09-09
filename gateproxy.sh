@@ -437,7 +437,7 @@ fi
 clear
 echo
 while true; do
-	read -p "Desea instalar Virtualbox Pack y Docker? (s/n)" answer
+	read -p "Desea instalar Virtualbox Pack? (s/n)" answer
 		case $answer in
           [Ss]* )
 		# execute command yes
@@ -479,11 +479,7 @@ while true; do
 	echo OK
 	echo "Acceso Local a las VMs: http://192.168.1.10:11600"
 	echo
-	echo "Instalando Docker..."
-	sudo sh -c "echo deb http://get.docker.io/ubuntu docker main\ > /etc/apt/sources.list.d/docker.list"
-    sudo apt update && sudo apt -f install && sudo apt -y install lxc-docker
-	echo "Vea comparativa VBox vs Docker en goo.gl/8FfC8O"
-			break;;
+		break;;
           	[Nn]* )
 		# execute command no
 			break;;
@@ -794,6 +790,37 @@ Fail2ban, DDOSDeflate, Mod Security, OWASP, Evasive, Rootkitchk (s/n)" answer
 	is_apachesecurity
 	is_rootkitchk
 	echo OK
+			break;;
+          	[Nn]* )
+		# execute command no
+			break;;
+        * ) echo; echo "Por favor responda SI (s) o NO (n).";;
+    esac
+done
+
+# IDS/IPS
+clear
+echo
+while true; do
+   read -p "Network Intrusion Prevention/Detection System (Experimental Pack)
+Desea instalar Snort Docker? -incluye Barnyard2, PulledPork, Snorby- (s/n)" answer
+		case $answer in
+          [Ss]* )
+		# execute command yes
+	echo "Instalando Docker..."
+	sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+	echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc/apt/sources.list.d/docker.list
+    sudo apt update && sudo apt -f install && sudo apt -y install docker-engine
+	sudo usermod -aG docker $(whoami)
+	sudo systemctl enable docker && sudo systemctl start docker
+	echo "Vea comparativa VBox vs Docker en goo.gl/8FfC8O"
+	echo
+	echo "Instalando Snort, Barnyard2, PulledPork, Snorby..."
+	git clone https://github.com/amabrouki/snort.git
+	cd snort && sudo docker build -t snort .
+	echo OK
+	echo "Iniciar con: docker run  --privileged -it -p 3000:3000 -d snort"
+	echo "Vea las instrucciones en: https://github.com/amabrouki/snort"
 			break;;
           	[Nn]* )
 		# execute command no
